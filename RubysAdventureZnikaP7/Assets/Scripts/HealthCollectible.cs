@@ -5,14 +5,13 @@ using UnityEngine;
 public class HealthCollectible : MonoBehaviour
 {
     // Start is called before the first frame update
-    void onTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Object that entered the triggered : ");
-    }
+        RubyController controller = other.GetComponent<RubyController>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (controller != null)
+        {
+            controller.ChangeHealth(1);
+            Destroy(gameObject;
+        }
     }
-}

@@ -6,6 +6,7 @@ public class RubyController : MonoBehaviour
 {
     public float speed = 3.0f;
 
+
     public int maxHealth = 5;
     int currentHealth; 
 
@@ -26,7 +27,6 @@ public class RubyController : MonoBehaviour
     {
         //create variables to use the built in axis
         horizontal = Input.GetAxis("Horizontal");
-        
         vertical = Input.GetAxis("Vertical");
     }
 
@@ -49,4 +49,6 @@ public class RubyController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
     }
+  
 }
+
